@@ -1,0 +1,6 @@
+name = "1wlf-site"
+main = "dist/index.html" # Point to your main HTML file
+compatibility_date = "2024-12-08"
+
+[assets]
+directory = "./dist"
