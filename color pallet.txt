@@ -1,0 +1,63 @@
+1WLF PROJECT COLOR PALETTE
+===========================
+
+PRIMARY COLORS
+--------------
+Primary Cyan (Main Accent): #08FDD8
+Primary Dark (Main Background): #0f0f10
+Secondary Dark: #1A1B1F
+Accent Dark: #2B2C31
+
+TEXT COLORS
+-----------
+Text Primary: #ffffff (White)
+Text Secondary: #B0B3B8 (Light Gray)
+
+GLOW EFFECTS
+------------
+Glow Primary: rgba(8, 253, 216, 0.4)
+Glow Secondary: rgba(8, 253, 216, 0.1)
+
+GRADIENT PALETTES
+-----------------
+Gradient 1 (Cyan/Blue):
+  - #08FDD8 (Cyan)
+  - #00D4FF (Light Blue)
+  - #0099FF (Blue)
+
+Gradient 2 (Pink/Orange/Yellow):
+  - #FF0080 (Pink/Magenta)
+  - #FF8C00 (Orange)
+  - #FFD700 (Gold/Yellow)
+
+Gradient 3 (Purple/Blue):
+  - #9D50BB (Purple)
+  - #6E48AA (Dark Purple)
+  - #4A90E2 (Blue)
+
+ADDITIONAL COLORS USED
+----------------------
+Background Radial Gradients:
+  - rgba(8, 253, 216, 0.05) - Cyan glow (5% opacity)
+  - rgba(255, 0, 128, 0.03) - Pink glow (3% opacity)
+  - rgba(0, 153, 255, 0.04) - Blue glow (4% opacity)
+  - rgba(157, 80, 187, 0.03) - Purple glow (3% opacity)
+
+Border Colors:
+  - rgba(8, 253, 216, 0.15) - Cyan border (15% opacity)
+  - rgba(8, 253, 216, 0.3) - Cyan border hover (30% opacity)
+
+Box Shadow Colors:
+  - rgba(8, 253, 216, 0.2) - Cyan shadow (20% opacity)
+  - rgba(8, 253, 216, 0.4) - Cyan shadow strong (40% opacity)
+  - rgba(0, 0, 0, 0.3) - Black shadow (30% opacity)
+
+DESIGN THEME
+------------
+- Dark theme with near-black backgrounds
+- Cyan (#08FDD8) as the primary accent color
+- White and light gray text for high contrast
+- Multiple gradient combinations for visual variety
+- Glow effects using cyan with varying opacity levels
+- Tech/cyberpunk aesthetic
+

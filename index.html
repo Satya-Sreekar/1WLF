@@ -3,237 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="1WLF — Engineered for Impact. A system builder's digital workspace." />
-  <meta name="theme-color" content="#1A1B1F" />
-  <meta name="author" content="1WLF" />
+  <meta name="description" content="1WLF — Builder. Engineer. Researcher. Shipping intelligent systems." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="author" content="Satya Sreekar Pattaswami" />
   <title>1WLF | Engineered for Impact</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐺</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="scroll-progress">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="scroll-progress" aria-hidden="true">
     <div class="scroll-progress-bar"></div>
   </div>
 
-  <div class="floating-particles"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="floating-particles" aria-hidden="true"></div>
 
-  <section class="intro">
-    <div class="section-content">
-      <div class="terminal" id="terminal"></div>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <section class="quote-section section-theme-1">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">Independence isn't about isolation,</span>
-        <span class="quote-line">It's about uncompromised quality.</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="quote-section section-theme-2">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">I don't just dream ideas,</span>
-        <span class="quote-line">I build systems.</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="quote-section section-theme-3">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">Deep focus,</span>
-        <span class="quote-line">Over shallow noise.</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="quote-section section-theme-4">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">Dreaming of AGI.</span>
-        <span class="quote-line">Building for Reality.</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="quote-section section-theme-5">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">I validate my worth</span>
-        <span class="quote-line">by what I ship.</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="quote-section section-theme-6">
-    <div class="section-content">
-      <div class="quote-text">
-        <span class="quote-line">No bureaucracy.</span>
-        <span class="quote-line">No fluff.</span>
-        <span class="quote-line">Just impact.</span>
-      </div>
-    </div>
-  </section>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          builder · engineer · researcher
+        </div>
+        <h1 class="hero-title">1WLF</h1>
+        <p class="hero-sub">I don't just write code — I craft systems that ship.</p>
 
-  <section class="contact">
-    <div class="section-content">
-      <div class="contact-command">user@1wlf:~$ ./connect --serious-inquiries-only</div>
-      <div class="contact-email">
-        <a href="mailto:contact@1wlf.com">contact@1wlf.com</a>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot" style="background:#ff5f57"></span>
+            <span class="terminal-dot" style="background:#febc2e"></span>
+            <span class="terminal-dot" style="background:#28c840"></span>
+            <span class="terminal-title">satya@1wlf ~</span>
+          </div>
+          <div class="terminal-body" id="terminal" role="img" aria-label="Terminal showing profile: AI Engineer, Full-Stack Builder, Researcher at ThinkOmega IT Solutions. Focus areas include AI, Healthcare Systems, Full-Stack Engineering, and Cloud Infrastructure."></div>
+        </div>
       </div>
-      <div class="icons">
-        <a href="#" title="GitHub" aria-label="GitHub Profile">🐙</a>
-        <a href="#" title="LinkedIn" aria-label="LinkedIn Profile">🔗</a>
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-hint-line"></div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Projects</span>
+        </div>
+        <h2 class="section-title reveal">What I've shipped</h2>
+
+        <a href="productPage/index.html" class="project-card reveal">
+          <div class="project-info">
+            <div class="project-badge">Full-Stack Platform</div>
+            <h3 class="project-title">1WLF TMS</h3>
+            <p class="project-desc">Multi-tenant task management with Kanban boards, real-time sync via SSE, automatic time tracking, QA workflows, and granular role-based access control.</p>
+            <div class="project-tech">
+              <span>FastAPI</span>
+              <span>React 19</span>
+              <span>MySQL</span>
+              <span>Docker</span>
+              <span>Tailwind</span>
+              <span>TypeScript</span>
+            </div>
+            <div class="project-cta">
+              <span>Explore Project</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="project-screenshots">
+            <div class="screenshot-wrapper">
+              <img src="productPage/screenshots/01-kanban.png" alt="TMS Kanban Board" class="project-screenshot" loading="lazy" width="550" height="350" />
+            </div>
+            <div class="screenshot-wrapper">
+              <img src="productPage/screenshots/04-task-detail.png" alt="TMS Task Detail" class="project-screenshot" loading="lazy" width="550" height="350" />
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ FOCUS AREAS ═══ -->
+    <section class="focus" aria-label="Focus Areas">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Focus</span>
+        </div>
+        <h2 class="section-title reveal">What I build</h2>
+
+        <div class="focus-grid">
+          <div class="focus-card reveal">
+            <div class="focus-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.24 9.93A4 4 0 0 1 12 2"/><path d="M12 9v4"/><path d="m15 13-3 3-3-3"/><circle cx="12" cy="20" r="2"/><path d="M6 20h.01"/><path d="M18 20h.01"/><path d="M6 16a4 4 0 0 1 0-8"/><path d="M18 16a4 4 0 0 0 0-8"/></svg>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>LLMs, computer vision, speech processing, and multimodal AI. Dreaming of AGI, building for reality.</p>
+          </div>
+
+          <div class="focus-card reveal">
+            <div class="focus-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Healthcare Systems</h3>
+            <p>Clinical automation, patient management, and medical data pipelines. Tech that directly saves lives.</p>
+          </div>
+
+          <div class="focus-card reveal">
+            <div class="focus-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h3v3H7z"/><path d="M14 7h3v3h-3z"/><path d="M7 14h3v3H7z"/><path d="M14 14h3v3h-3z"/></svg>
+            </div>
+            <h3>Full-Stack Engineering</h3>
+            <p>React, Flutter, FastAPI, Node.js — end-to-end product development from database to deployment.</p>
+          </div>
+
+          <div class="focus-card reveal">
+            <div class="focus-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            </div>
+            <h3>Cloud & Infrastructure</h3>
+            <p>AWS, Docker, Nginx, CI/CD, Linux. Scalable, secure, production-ready systems with cost optimization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ QUOTES ═══ -->
+    <section class="quotes" aria-label="Philosophy">
+      <div class="container">
+        <div class="quote-block">
+          <blockquote class="quote-text quote-reveal">I don't just dream ideas, I build systems.</blockquote>
+        </div>
+        <div class="quote-block">
+          <blockquote class="quote-text quote-reveal">Deep focus, over shallow noise.</blockquote>
+        </div>
+        <div class="quote-block">
+          <blockquote class="quote-text quote-reveal">Dreaming of AGI. Building for Reality.</blockquote>
+        </div>
+        <div class="quote-block">
+          <blockquote class="quote-text quote-reveal">No bureaucracy. No fluff. Just impact.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Connect</span>
+        </div>
+        <h2 class="contact-command reveal">
+          <span class="terminal-prompt-text">user@1wlf:~$</span> ./connect --serious-inquiries-only
+        </h2>
+        <div class="contact-email reveal">
+          <a href="mailto:contact1wlf@gmail.com">contact1wlf@gmail.com</a>
+        </div>
+        <nav class="social-links reveal" aria-label="Social links">
+          <a href="https://github.com/Satya-Sreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/satya-sreekar-pattaswami-093a2220a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <script>
-    // Enhanced terminal typing effect with new "Builder" persona
-    const terminal = document.getElementById("terminal");
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ─── Terminal typing ───
+    const terminal = document.getElementById('terminal');
     const commands = [
-      "user@1wlf:~$ ./initialize",
-      "> Loading Builder's Instinct...",
-      "> Bypassing theoretical fluff...",
-      "> System Status: Operational.",
-      "> Target: Deployment in the real world.",
-      "",
-      "user@1wlf:~$ ./philosophy",
-      "> I don't just write code; I craft solutions.",
-      "> Uncompromised quality requires deep focus.",
-      "> Meaningful creation over corporate noise.",
-      "",
-      "user@1wlf:~$ ./focus",
-      "> Loading Active Modules...",
-      "  [+] AI & Large Language Models",
-      "  [+] Healthcare & Clinical Systems",
-      "  [+] Multilingual Accessibility",
-      "  [+] High-Performance Apps"
+      { text: 'user@1wlf:~$ whoami', type: 'cmd' },
+      { text: '> Satya Sreekar Pattaswami', type: 'out' },
+      { text: '> Co-Founder @ ThinkOmega IT Solutions', type: 'out' },
+      { text: '> AI Engineer · Builder · Researcher', type: 'out' },
+      { text: '', type: 'blank' },
+      { text: 'user@1wlf:~$ cat ./stack', type: 'cmd' },
+      { text: '  [+] AI — LLMs · Vision · Speech · Multimodal', type: 'out' },
+      { text: '  [+] Backend — FastAPI · Flask · Node.js · AWS', type: 'out' },
+      { text: '  [+] Frontend — React · Flutter · TypeScript', type: 'out' },
+      { text: '  [+] Infra — Docker · Nginx · CI/CD · Linux', type: 'out' },
+      { text: '', type: 'blank' },
+      { text: 'user@1wlf:~$ echo $STATUS', type: 'cmd' },
+      { text: '> Building intelligent systems that ship.', type: 'out' },
     ];
-    
-    let commandIndex = 0;
-    let charIndex = 0;
-    
-    function typeCommand() {
-      if (commandIndex < commands.length) {
-        if (charIndex < commands[commandIndex].length) {
-          terminal.innerHTML += commands[commandIndex].charAt(charIndex);
-          charIndex++;
-          // Faster typing for a "hacker" feel
-          setTimeout(typeCommand, 20); 
-        } else {
-          terminal.innerHTML += '\n';
-          commandIndex++;
-          charIndex = 0;
-          // Shorter pause between lines
-          setTimeout(typeCommand, 150);
+
+    function typeTerminal() {
+      if (prefersReducedMotion) {
+        terminal.textContent = commands.map(c => c.text).join('\n');
+        addCursor();
+        return;
+      }
+
+      const textNode = document.createTextNode('');
+      terminal.appendChild(textNode);
+      let ci = 0, chi = 0;
+
+      function type() {
+        if (ci >= commands.length) { addCursor(); return; }
+        const line = commands[ci];
+        if (line.type === 'blank') {
+          textNode.textContent += '\n';
+          ci++; chi = 0;
+          setTimeout(type, 100);
+          return;
         }
-      } else {
-        const cursor = document.createElement("span");
-        cursor.className = "cursor";
-        terminal.appendChild(cursor);
+        if (chi < line.text.length) {
+          textNode.textContent += line.text.charAt(chi);
+          chi++;
+          setTimeout(type, line.type === 'cmd' ? 30 : 12);
+        } else {
+          textNode.textContent += '\n';
+          ci++; chi = 0;
+          setTimeout(type, line.type === 'cmd' ? 300 : 80);
+        }
       }
-    }
-    
-    setTimeout(typeCommand, 800);
-
-    // Scroll progress bar
-    function updateScrollProgress() {
-      const scrolled = window.pageYOffset;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrolled / maxScroll) * 100;
-      document.querySelector('.scroll-progress-bar').style.width = progress + '%';
+      setTimeout(type, 600);
     }
 
-    // Floating particles
+    function addCursor() {
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor';
+      cursor.setAttribute('aria-hidden', 'true');
+      terminal.appendChild(cursor);
+    }
+
+    // ─── Scroll progress ───
+    const bar = document.querySelector('.scroll-progress-bar');
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max > 0) bar.style.width = ((window.pageYOffset / max) * 100) + '%';
+    }, { passive: true });
+
+    // ─── Particles ───
     function createParticles() {
-      const particleContainer = document.querySelector('.floating-particles');
-      const particleCount = 60;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + 'vw';
-        particle.style.width = particle.style.height = (Math.random() * 2 + 1) + 'px';
-        particle.style.opacity = (Math.random() * 0.3 + 0.2).toFixed(2);
-        particle.style.animationDelay = (Math.random() * 20) + 's';
-        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        particle.style.setProperty('--drift', (Math.random() * 40 - 20) + 'vw');
-        particleContainer.appendChild(particle);
+      if (prefersReducedMotion) return;
+      const container = document.querySelector('.floating-particles');
+      const count = window.innerWidth < 768 ? 12 : 30;
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + 'vw';
+        const size = (Math.random() * 2 + 0.5) + 'px';
+        p.style.width = size;
+        p.style.height = size;
+        p.style.animationDelay = (Math.random() * 20) + 's';
+        p.style.animationDuration = (Math.random() * 15 + 12) + 's';
+        p.style.setProperty('--drift', (Math.random() * 30 - 15) + 'vw');
+        container.appendChild(p);
       }
     }
 
-    // Intersection Observer for quote sections
-    function observeQuoteSections() {
-      const quoteSections = document.querySelectorAll('.quote-section');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      }, {
-        threshold: 0.5
-      });
+    // ─── GSAP Animations ───
+    function initAnimations() {
+      if (prefersReducedMotion) {
+        // Make everything visible immediately
+        gsap.set('.hero-tag, .hero-title, .hero-sub, .terminal, .scroll-hint', { opacity: 1, y: 0 });
+        gsap.set('.reveal', { opacity: 1, y: 0 });
+        return;
+      }
 
-      quoteSections.forEach(section => {
-        observer.observe(section);
-      });
-    }
+      // Hero entrance
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      heroTl
+        .from('.hero-tag', { y: 30, opacity: 0, duration: 0.7 })
+        .from('.hero-title', { y: 50, opacity: 0, duration: 1, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-sub', { y: 20, opacity: 0, duration: 0.7 }, '-=0.5')
+        .from('.terminal', { y: 40, opacity: 0, duration: 0.9 }, '-=0.4')
+        .from('.scroll-hint', { opacity: 0, duration: 0.6 }, '-=0.3');
 
-    // Initialize everything
-    document.addEventListener('DOMContentLoaded', () => {
-      createParticles();
-      observeQuoteSections();
-      
-      // Smooth scrolling for any internal links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth'
-            });
+      // Scroll-triggered reveals
+      gsap.utils.toArray('.reveal').forEach((el, i) => {
+        gsap.from(el, {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none none',
           }
         });
       });
 
-      // Animate words in each quote-line
-      document.querySelectorAll('.quote-line').forEach(line => {
-        const text = line.textContent;
+      // Focus cards stagger
+      gsap.from('.focus-card', {
+        y: 60,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.focus-grid',
+          start: 'top 80%',
+        }
+      });
+
+      // Quote word reveals
+      document.querySelectorAll('.quote-reveal').forEach(quote => {
+        const text = quote.textContent;
         const words = text.split(' ');
-        line.innerHTML = '';
+        quote.textContent = '';
         words.forEach((word, i) => {
           const span = document.createElement('span');
-          span.className = 'quote-word';
+          span.className = 'word';
           span.textContent = word + (i < words.length - 1 ? ' ' : '');
-          span.style.animationDelay = (i * 0.15) + 's';
-          line.appendChild(span);
+          quote.appendChild(span);
+        });
+
+        gsap.from(quote.querySelectorAll('.word'), {
+          y: 40,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.04,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: quote,
+            start: 'top 80%',
+          }
         });
       });
 
-      document.querySelectorAll('.quote-text').forEach(quote => {
-        quote.querySelectorAll('.quote-line').forEach((line, i) => {
-          line.style.animationDelay = (i * 0.2) + 's';
+      // Screenshot parallax
+      gsap.utils.toArray('.screenshot-wrapper').forEach(wrapper => {
+        gsap.from(wrapper, {
+          y: 40,
+          duration: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: wrapper,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
+          }
         });
       });
-    });
 
-    window.addEventListener('scroll', updateScrollProgress);
+      // Social links stagger
+      gsap.from('.social-link', {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.social-links',
+          start: 'top 90%',
+        }
+      });
+    }
 
-    // Interactive hover effects
-    document.addEventListener('mousemove', (e) => {
-      const cursor = document.querySelector('.cursor');
-      if (cursor) {
-        const rect = cursor.getBoundingClientRect();
-        // Simple distance check to subtle color shift if near
-        // (Optional visual flair)
-      }
+    // ─── Init ───
+    document.addEventListener('DOMContentLoaded', () => {
+      typeTerminal();
+      createParticles();
+      initAnimations();
     });
   </script>
 </body>
