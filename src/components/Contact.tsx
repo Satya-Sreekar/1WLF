@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion'
 import { Github, Linkedin } from 'lucide-react'
 import { SectionHeader } from './SectionHeader'
 import { ScrollReveal } from './ScrollReveal'
 import { socialLinks, contactEmail } from '../data/content'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import '../styles/contact.css'
 
 const iconMap = {
@@ -10,6 +12,8 @@ const iconMap = {
 }
 
 export function Contact() {
+  const skip = useReducedMotion()
+
   return (
     <section className="contact" aria-label="Contact">
       <div className="container">
@@ -23,9 +27,16 @@ export function Contact() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="contact-email">
-            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-          </div>
+          <motion.div className="contact-email">
+            <motion.a
+              href={`mailto:${contactEmail}`}
+              whileHover={skip ? {} : { scale: 1.03 }}
+              whileTap={skip ? {} : { scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+            >
+              {contactEmail}
+            </motion.a>
+          </motion.div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
@@ -33,17 +44,20 @@ export function Contact() {
             {socialLinks.map(link => {
               const Icon = iconMap[link.icon]
               return (
-                <a
+                <motion.a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${link.label} Profile`}
                   className="social-link"
+                  whileHover={skip ? {} : { scale: 1.05, y: -2 }}
+                  whileTap={skip ? {} : { scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 15 }}
                 >
                   <Icon size={22} />
                   <span>{link.label}</span>
-                </a>
+                </motion.a>
               )
             })}
           </nav>

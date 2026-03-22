@@ -9,7 +9,6 @@
   text-align: center;
   padding: 80px 24px 40px;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {
@@ -28,6 +27,27 @@
 .hero-content {
   max-width: 800px;
   width: 100%;
+}
+
+/* ─── Logo ─── */
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10000;
+}
+
+.hero-logo {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(8, 253, 216, 0.35));
+  animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+  0% { filter: drop-shadow(0 0 30px rgba(8, 253, 216, 0.25)); }
+  100% { filter: drop-shadow(0 0 50px rgba(8, 253, 216, 0.5)); }
 }
 
 .hero-tag {
@@ -55,18 +75,6 @@
 @keyframes pulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--cyan-glow); }
   50% { opacity: 0.5; box-shadow: 0 0 16px var(--cyan-glow); }
-}
-
-.hero-title {
-  font-size: clamp(4rem, 15vw, 10rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, var(--cyan) 60%, var(--purple) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-sub {
@@ -176,14 +184,21 @@
 
 @media (max-width: 768px) {
   .terminal-body {
-    font-size: 0.75rem;
     min-height: 220px;
     padding: 16px;
+  }
+
+  .hero-logo {
+    width: 160px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
     padding: 60px 16px 40px;
+  }
+
+  .hero-logo {
+    width: 130px;
   }
 }

@@ -1,18 +1,35 @@
-import { useRef } from 'react'
+import { useRef, useState, useCallback } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { SectionHeader } from './SectionHeader'
 import { ScrollReveal } from './ScrollReveal'
 import { projectInfo } from '../data/content'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import '../styles/projects.css'
 
 export function Projects() {
+  const skip = useReducedMotion()
   const cardRef = useRef<HTMLAnchorElement>(null)
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ['start end', 'end start'],
   })
-  const imgY = useTransform(scrollYProgress, [0, 1], [30, -30])
+  const imgY = useTransform(scrollYProgress, [0, 1], [40, -40])
+
+  // 3D tilt
+  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 })
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (skip) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    setTilt({ rotateX: y * -8, rotateY: x * 8 })
+  }, [skip])
+
+  const handleMouseLeave = useCallback(() => {
+    setTilt({ rotateX: 0, rotateY: 0 })
+  }, [])
 
   return (
     <section className="projects" aria-label="Projects">
@@ -20,10 +37,19 @@ export function Projects() {
         <SectionHeader label="Projects" title="What I've shipped" />
 
         <ScrollReveal>
-          <a
+          <motion.a
             href={projectInfo.href}
             className="project-card"
             ref={cardRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              rotateX: tilt.rotateX,
+              rotateY: tilt.rotateY,
+              transformPerspective: 1200,
+            }}
+            transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+            whileHover={skip ? {} : { scale: 1.01 }}
           >
             <div className="project-info">
               <div className="project-badge">{projectInfo.badge}</div>
@@ -44,7 +70,7 @@ export function Projects() {
                 <motion.div
                   key={s.src}
                   className="screenshot-wrapper"
-                  style={{ y: imgY }}
+                  style={{ y: skip ? 0 : imgY }}
                 >
                   <img
                     src={s.src}
@@ -57,7 +83,7 @@ export function Projects() {
                 </motion.div>
               ))}
             </div>
-          </a>
+          </motion.a>
         </ScrollReveal>
       </div>
     </section>

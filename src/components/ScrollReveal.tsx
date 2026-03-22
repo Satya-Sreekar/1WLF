@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 interface ScrollRevealProps {
   children: ReactNode
@@ -20,12 +21,13 @@ export function ScrollReveal({
   delay = 0,
   className,
 }: ScrollRevealProps) {
+  const skip = useReducedMotion()
   const offset = directionMap[direction]
 
   return (
     <motion.div
-      initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={skip ? {} : { opacity: 0, filter: 'blur(4px)', ...offset }}
+      whileInView={{ opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: '-12%' }}
       transition={{
         duration: 0.8,

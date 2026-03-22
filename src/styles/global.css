@@ -141,7 +141,6 @@ body {
 
 section {
   position: relative;
-  z-index: 2;
 }
 
 /* ─── Section labels ─── */
@@ -184,6 +183,28 @@ section {
   .container {
     padding: 0 16px;
   }
+}
+
+/* ─── Mouse glow orb ─── */
+.mouse-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(8, 253, 216, 0.06) 0%,
+    rgba(168, 85, 247, 0.03) 30%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .mouse-glow { display: none; }
 }
 
 /* ─── Reduced motion ─── */

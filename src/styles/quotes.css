@@ -4,12 +4,26 @@
 }
 
 .quote-block {
-  padding: 60px 0;
+  padding: 56px 0 56px 32px;
   border-top: 1px solid var(--border);
+  position: relative;
 }
 
 .quote-block:last-child {
   border-bottom: 1px solid var(--border);
+}
+
+/* Cyan accent bar */
+.quote-block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 56px;
+  bottom: 56px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--cyan), rgba(168, 85, 247, 0.5));
+  opacity: 0.6;
 }
 
 .quote-text {
@@ -29,7 +43,13 @@
 
 @media (max-width: 768px) {
   .quote-block {
-    padding: 40px 0;
+    padding: 40px 0 40px 20px;
+  }
+
+  .quote-block::before {
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
   }
 
   .quotes {

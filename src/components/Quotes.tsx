@@ -6,8 +6,8 @@ export function Quotes() {
   return (
     <section className="quotes" aria-label="Philosophy">
       <div className="container">
-        {quotes.map(q => (
-          <QuoteBlock key={q} text={q} />
+        {quotes.map((q, i) => (
+          <QuoteBlock key={q} text={q} index={i} />
         ))}
       </div>
     </section>

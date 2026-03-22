@@ -14,11 +14,12 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2rem;
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: default;
 }
 
+/* Gradient border glow on hover */
 .focus-card::before {
   content: '';
   position: absolute;
@@ -27,39 +28,60 @@
   background: linear-gradient(135deg, var(--cyan), transparent 60%, var(--purple));
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: -1;
-}
-
-.focus-card:hover {
-  border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 .focus-card:hover::before {
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+/* Mouse-tracking glow */
+.focus-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(
+    400px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(8, 253, 216, 0.08) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.focus-card:hover .focus-card-glow {
+  opacity: 1;
 }
 
 .focus-icon {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(8, 253, 216, 0.08);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(8, 253, 216, 0.1);
+  border: 1px solid rgba(8, 253, 216, 0.12);
   color: var(--cyan);
   margin-bottom: 1.25rem;
 }
 
 .focus-card h3 {
-  font-size: 1.1rem;
+  position: relative;
+  z-index: 2;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
 
 .focus-card p {
+  position: relative;
+  z-index: 2;
   color: var(--text-dim);
   font-size: 0.875rem;
   line-height: 1.65;

@@ -1,6 +1,19 @@
 /* ═══ Contact ═══ */
 .contact {
-  padding: 120px 0;
+  padding: 140px 0 120px;
+  position: relative;
+}
+
+/* Subtle glow separator from quotes */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan-dim), transparent);
 }
 
 .contact-command {
@@ -20,6 +33,7 @@
 }
 
 .contact-email a {
+  display: inline-block;
   color: var(--text);
   text-decoration: none;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
@@ -63,7 +77,7 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 80px 0;
+    padding: 100px 0 80px;
   }
 }
 
