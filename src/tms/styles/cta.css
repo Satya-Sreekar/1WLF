@@ -32,3 +32,15 @@
 .cta-section .hero-actions {
   position: relative;
 }
+
+.cta-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(79, 110, 247, 0.3);
+  transition: border-color 0.2s;
+}
+
+.cta-link:hover {
+  border-bottom-color: var(--accent);
+}

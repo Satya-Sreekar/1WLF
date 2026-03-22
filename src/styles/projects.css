@@ -1,6 +1,6 @@
 /* ═══ Projects ═══ */
 .projects {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .project-card {
@@ -11,8 +11,8 @@
   color: var(--text);
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 2.5rem;
+  border-radius: 16px;
+  padding: 2rem;
   transition: border-color 0.4s ease, box-shadow 0.4s ease;
   transform-style: preserve-3d;
 }
@@ -45,7 +45,7 @@
   opacity: 0;
   transition: opacity 0.4s ease;
   animation: shimmerLine 3s linear infinite;
-  border-radius: 20px 20px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .project-card:hover::after {
@@ -137,7 +137,7 @@
 }
 
 .screenshot-wrapper {
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   transition: border-color 0.3s ease;
@@ -162,7 +162,7 @@
 @media (max-width: 768px) {
   .project-card {
     grid-template-columns: 1fr;
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .project-screenshots {
@@ -170,6 +170,6 @@
   }
 
   .projects {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }

@@ -32,7 +32,7 @@ export function Projects() {
   }, [])
 
   return (
-    <section className="projects" aria-label="Projects">
+    <section id="projects" className="projects" aria-label="Projects">
       <div className="container">
         <SectionHeader label="Projects" title="What I've shipped" />
 

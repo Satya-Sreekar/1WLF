@@ -25,7 +25,7 @@ export function FocusAreas() {
   const skip = useReducedMotion()
 
   return (
-    <section className="focus" aria-label="Focus Areas">
+    <section id="focus" className="focus" aria-label="Focus Areas">
       <div className="container">
         <SectionHeader label="Focus" title="What I build" />
 

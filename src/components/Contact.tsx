@@ -15,9 +15,9 @@ export function Contact() {
   const skip = useReducedMotion()
 
   return (
-    <section className="contact" aria-label="Contact">
+    <section id="contact" className="contact" aria-label="Contact">
       <div className="container">
-        <SectionHeader label="Connect" />
+        <SectionHeader label="Connect" title="Get in touch" />
 
         <ScrollReveal>
           <h2 className="contact-command">

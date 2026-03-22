@@ -34,7 +34,7 @@ export function Navbar() {
           </a>
         ))}
       </div>
-      <a className="nav-cta" href="#screenshots">See it in action</a>
+      <a className="nav-cta" href="https://tms.1wlf.com" target="_blank" rel="noopener noreferrer">Try it Live</a>
       <button className="nav-hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation menu">
         {mobileOpen ? <X size={24} /> : <Menu size={24} />}
       </button>

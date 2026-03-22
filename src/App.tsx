@@ -6,6 +6,7 @@ import { MouseGlow } from './components/MouseGlow'
 import { AuroraGlow } from './components/AuroraGlow'
 import { Meteors } from './components/Meteors'
 import { Loader } from './components/Loader'
+import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
 import { FocusAreas } from './components/FocusAreas'
@@ -21,6 +22,7 @@ export default function App() {
       <Loader onComplete={handleComplete} />
 
       <SkipLink />
+      <Navbar />
       <ScrollProgress />
       <BackgroundLayers />
       <AuroraGlow />

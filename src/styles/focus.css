@@ -1,6 +1,6 @@
 /* ═══ Focus Areas ═══ */
 .focus {
-  padding: 80px 0 120px;
+  padding: 100px 0;
 }
 
 .focus-grid {
@@ -24,7 +24,7 @@
   content: '';
   position: absolute;
   inset: -1px;
-  border-radius: 17px;
+  border-radius: 17px; /* 16px + 1px for inset offset */
   background: conic-gradient(
     from var(--border-angle, 0deg),
     var(--cyan),
@@ -112,6 +112,6 @@
   }
 
   .focus {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }

@@ -219,13 +219,13 @@ export interface Screenshot {
 }
 
 export const screenshots: Screenshot[] = [
+  { src: '/tms/screenshots/08-login.png', darkSrc: '/tms/screenshots-dark/08-login.png', alt: 'Login Page', title: 'Authentication', caption: 'Clean login page with email/password, forgot password flow, and new account registration.' },
   { src: '/tms/screenshots/01-kanban.png', darkSrc: '/tms/screenshots-dark/01-kanban.png', alt: 'Kanban Board', title: 'Kanban Board', caption: 'Multi-column kanban with swim lanes, task cards showing priority, difficulty, assignee, and due date.' },
   { src: '/tms/screenshots/02-list-view.png', darkSrc: '/tms/screenshots-dark/02-list-view.png', alt: 'List View', title: 'List View', caption: 'Hierarchical list grouped by organization and project with collapsible sections.' },
   { src: '/tms/screenshots/04-task-detail.png', darkSrc: '/tms/screenshots-dark/04-task-detail.png', alt: 'Task Detail', title: 'Task Detail', caption: 'Full task detail with status, priority, type, category, description, creator, and activity log.' },
   { src: '/tms/screenshots/05-task-edit.png', darkSrc: '/tms/screenshots-dark/05-task-edit.png', alt: 'Task Edit Form', title: 'Task Edit Form', caption: 'Complete task editor with all fields: type, category, priority, difficulty, story points, hours, due date.' },
   { src: '/tms/screenshots/06-notifications.png', darkSrc: '/tms/screenshots-dark/06-notifications.png', alt: 'Notifications', title: 'Notification Center', caption: 'In-app notification dropdown with real-time assignment and status-change alerts.' },
   { src: '/tms/screenshots/07-settings.png', darkSrc: '/tms/screenshots-dark/07-settings.png', alt: 'Settings & Freelancer Dashboard', title: 'Settings & Freelancer Dashboard', caption: 'Freelancer mode toggle, kanban column visibility, and time tracking analytics with charts.' },
-  { src: '/tms/screenshots/08-login.png', darkSrc: '/tms/screenshots-dark/08-login.png', alt: 'Login Page', title: 'Authentication', caption: 'Clean login page with email/password, forgot password flow, and new account registration.', span: 2 },
 ]
 
 export interface Role {
@@ -239,7 +239,6 @@ export const orgRoles: Role[] = [
   { badge: 'Owner', badgeVariant: 'owner', title: 'Owner', description: 'Full control. Delete org, manage all members, all projects. Cannot be demoted or removed.' },
   { badge: 'Admin', badgeVariant: 'admin', title: 'Admin', description: 'Manage members, create/delete projects, send invitations, bulk-set project access.' },
   { badge: 'Member', badgeVariant: 'member', title: 'Member', description: 'Create projects, manage tasks in their assigned projects, invite via explicit permission.' },
-  { badge: 'Viewer', badgeVariant: 'viewer', title: 'Viewer', description: 'Read-only access. Can browse orgs, projects, and tasks but cannot make changes.' },
 ]
 
 export const projectRoles: Role[] = [
