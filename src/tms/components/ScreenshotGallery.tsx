@@ -47,7 +47,6 @@ export function ScreenshotGallery() {
     return () => window.removeEventListener('keydown', onKey)
   }, [prev, next, interact])
 
-  const shot = screenshots[current]
 
   return (
     <section id="screenshots" style={{ padding: '5rem 2rem' }}>
