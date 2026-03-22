@@ -1,0 +1,38 @@
+/* ═══ Quotes ═══ */
+.quotes {
+  padding: 80px 0 120px;
+}
+
+.quote-block {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.quote-block:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.quote-text {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.quote-text .word {
+  display: inline-block;
+  white-space: pre;
+}
+
+@media (max-width: 768px) {
+  .quote-block {
+    padding: 40px 0;
+  }
+
+  .quotes {
+    padding: 40px 0 80px;
+  }
+}
