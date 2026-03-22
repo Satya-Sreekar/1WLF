@@ -1,7 +1,7 @@
-import { techStack } from '../tms-content'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/tech.css'
+import { techStack } from '../../tms-content'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../../shared'
+import './tech.css'
 
 export function TechStack() {
   return (

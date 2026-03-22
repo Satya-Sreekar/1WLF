@@ -1,4 +1,4 @@
-import { ScrollReveal } from './ScrollReveal'
+import { ScrollReveal } from '../shared'
 
 interface SectionHeaderProps {
   label: string

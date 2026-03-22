@@ -1,5 +1,5 @@
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/cta.css'
+import { ScrollReveal } from '../../../shared'
+import './cta.css'
 
 export function CtaSection() {
   return (

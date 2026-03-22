@@ -59,7 +59,7 @@ export const projectInfo = {
   badge: 'Full-Stack Platform',
   title: '1WLF TMS',
   description: 'Multi-tenant task management with Kanban boards, real-time sync via SSE, automatic time tracking, QA workflows, and granular role-based access control.',
-  href: 'https://tms.1wlf.com',
+  href: '/tms',
   tech: ['FastAPI', 'React 19', 'MySQL', 'Docker', 'Tailwind', 'TypeScript'],
   screenshots: [
     { src: '/tms/screenshots-dark/01-kanban.png', alt: 'TMS Kanban Board' },

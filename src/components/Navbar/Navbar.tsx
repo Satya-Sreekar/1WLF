@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
-import '../styles/navbar.css'
+import './navbar.css'
 
 const sections = [
   { label: 'Projects', id: 'projects' },
@@ -58,7 +58,7 @@ export function Navbar() {
         ))}
       </div>
 
-      <a href="https://tms.1wlf.com" className="home-nav-flagship home-nav-flagship-desktop">
+      <a href="/tms" className="home-nav-flagship home-nav-flagship-desktop">
         <span className="flagship-badge">Flagship</span>
         1WLF TMS
         <ArrowRight size={14} />
@@ -78,7 +78,7 @@ export function Navbar() {
             {s.label}
           </a>
         ))}
-        <a href="https://tms.1wlf.com" className="home-nav-flagship" onClick={() => setMobileOpen(false)}>
+        <a href="/tms" className="home-nav-flagship" onClick={() => setMobileOpen(false)}>
           <span className="flagship-badge">Flagship</span>
           1WLF TMS
           <ArrowRight size={14} />

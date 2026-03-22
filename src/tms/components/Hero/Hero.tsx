@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { heroData } from '../tms-content'
-import { useReducedMotion } from '../../hooks/useReducedMotion'
-import '../styles/hero.css'
+import { heroData } from '../../tms-content'
+import { useReducedMotion } from '../../../hooks/useReducedMotion'
+import './hero.css'
 
 export function Hero() {
   const skip = useReducedMotion()

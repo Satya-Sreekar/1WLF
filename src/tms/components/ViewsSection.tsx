@@ -1,7 +1,7 @@
 import { kanbanShowcase, listShowcase } from '../tms-content'
 import { SectionHeader } from './SectionHeader'
 import { Showcase } from './Showcase'
-import '../styles/showcase.css'
+import './Showcase/showcase.css'
 
 export function ViewsSection() {
   return (

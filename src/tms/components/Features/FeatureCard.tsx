@@ -5,8 +5,8 @@ import {
   ScrollText, BellRing, BarChart3, FileDown, Mail, Search,
   LockKeyhole, Landmark, FolderOpen, CheckCircle2, RadioTower, Clock,
 } from 'lucide-react'
-import type { Feature } from '../tms-content'
-import { useReducedMotion } from '../../hooks/useReducedMotion'
+import type { Feature } from '../../tms-content'
+import { useReducedMotion } from '../../../hooks/useReducedMotion'
 
 const iconMap: Record<string, React.ComponentType<{ size: number }>> = {
   'building-2': Building2,

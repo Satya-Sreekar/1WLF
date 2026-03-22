@@ -1,8 +1,8 @@
-import { features } from '../tms-content'
-import { SectionHeader } from './SectionHeader'
+import { features } from '../../tms-content'
+import { SectionHeader } from '../SectionHeader'
 import { FeatureCard } from './FeatureCard'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/features.css'
+import { ScrollReveal } from '../../../shared'
+import './features.css'
 
 export function FeaturesGrid() {
   return (

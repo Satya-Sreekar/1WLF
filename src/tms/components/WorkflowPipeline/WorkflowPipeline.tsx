@@ -1,7 +1,7 @@
-import { workflowSteps } from '../tms-content'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/workflow.css'
+import { workflowSteps } from '../../tms-content'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../../shared'
+import './workflow.css'
 
 export function WorkflowPipeline() {
   return (

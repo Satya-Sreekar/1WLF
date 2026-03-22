@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { ChevronLeft, ChevronRight, Sun, Moon, Play, Pause } from 'lucide-react'
-import { screenshots } from '../tms-content'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/gallery.css'
+import { screenshots } from '../../tms-content'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../../shared'
+import './gallery.css'
 
 export function ScreenshotGallery() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')

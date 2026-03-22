@@ -1,8 +1,8 @@
 import { useRef, useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Brain, Activity, LayoutGrid, Cloud } from 'lucide-react'
-import type { FocusArea } from '../data/content'
-import { useReducedMotion } from '../hooks/useReducedMotion'
+import type { FocusArea } from '../../data/content'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 const iconMap = {
   brain: Brain,

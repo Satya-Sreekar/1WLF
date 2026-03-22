@@ -1,7 +1,7 @@
-import { orgRoles, projectRoles } from '../tms-content'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/roles.css'
+import { orgRoles, projectRoles } from '../../tms-content'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../../shared'
+import './roles.css'
 
 export function AccessControl() {
   return (

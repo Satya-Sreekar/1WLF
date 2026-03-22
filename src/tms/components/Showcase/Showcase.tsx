@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import type { ShowcaseData } from '../tms-content'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import { useReducedMotion } from '../../hooks/useReducedMotion'
+import type { ShowcaseData } from '../../tms-content'
+import { ScrollReveal } from '../../../shared'
+import { useReducedMotion } from '../../../hooks/useReducedMotion'
 
 export function Showcase({ imageSrc, imageAlt, title, description, features, chips, reversed }: ShowcaseData) {
   const imgRef = useRef<HTMLDivElement>(null)

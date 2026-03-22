@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin } from 'lucide-react'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from './ScrollReveal'
-import { socialLinks, contactEmail } from '../data/content'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/contact.css'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../shared'
+import { socialLinks, contactEmail } from '../../data/content'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './contact.css'
 
 const iconMap = {
   github: Github,

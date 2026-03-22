@@ -28,7 +28,7 @@ test.describe('Homepage Navbar', () => {
     await expect(flagship).toBeVisible()
     await expect(flagship).toContainText('1WLF TMS')
     await expect(flagship).toContainText('Flagship')
-    await expect(flagship).toHaveAttribute('href', 'https://tms.1wlf.com')
+    await expect(flagship).toHaveAttribute('href', '/tms')
   })
 
   test('navbar gets scrolled class on scroll', async ({ page }) => {

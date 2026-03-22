@@ -1,11 +1,11 @@
 import { useRef, useState, useCallback } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import { SectionHeader } from './SectionHeader'
-import { ScrollReveal } from './ScrollReveal'
-import { projectInfo } from '../data/content'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/projects.css'
+import { SectionHeader } from '../SectionHeader'
+import { ScrollReveal } from '../../shared'
+import { projectInfo } from '../../data/content'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './projects.css'
 
 export function Projects() {
   const skip = useReducedMotion()

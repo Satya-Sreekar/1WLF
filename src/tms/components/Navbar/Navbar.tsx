@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import { navLinks } from '../tms-content'
-import '../styles/navbar.css'
+import { navLinks } from '../../tms-content'
+import './navbar.css'
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -24,7 +24,7 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <a href="/" className="nav-logo">
-        <span className="nav-logo-icon">🐺</span>
+        <img src="/logo.png" alt="1WLF" className="nav-logo-icon" />
         <span>1WLF TMS</span>
       </a>
       <div className="nav-links">

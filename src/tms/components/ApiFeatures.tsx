@@ -1,7 +1,7 @@
 import { apiFeatures } from '../tms-content'
 import { SectionHeader } from './SectionHeader'
-import { FeatureCard } from './FeatureCard'
-import { ScrollReveal } from '../../components/ScrollReveal'
+import { FeatureCard } from './Features'
+import { ScrollReveal } from '../../shared'
 
 export function ApiFeatures() {
   return (

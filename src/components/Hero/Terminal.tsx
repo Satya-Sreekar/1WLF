@@ -1,6 +1,6 @@
-import { useTerminalTyping } from '../hooks/useTerminalTyping'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import { terminalCommands } from '../data/content'
+import { useTerminalTyping } from '../../hooks/useTerminalTyping'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import { terminalCommands } from '../../data/content'
 
 export function Terminal() {
   const reducedMotion = useReducedMotion()

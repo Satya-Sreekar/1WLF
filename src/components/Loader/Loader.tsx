@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/loader.css'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './loader.css'
 
 interface LoaderProps {
   onComplete: () => void

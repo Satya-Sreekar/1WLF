@@ -1,7 +1,7 @@
-import { stats } from '../tms-content'
-import { useCountUp } from '../../hooks/useCountUp'
-import { ScrollReveal } from '../../components/ScrollReveal'
-import '../styles/stats.css'
+import { stats } from '../../tms-content'
+import { useCountUp } from '../../../hooks/useCountUp'
+import { ScrollReveal } from '../../../shared'
+import './stats.css'
 
 function AnimatedStat({ value, label, isNumeric }: { value: string; label: string; isNumeric: boolean }) {
   const numericValue = isNumeric ? parseInt(value, 10) : 0

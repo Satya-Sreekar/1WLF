@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/meteors.css'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './meteors.css'
 
 interface MeteorData {
   left: string

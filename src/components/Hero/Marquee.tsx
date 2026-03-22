@@ -1,5 +1,5 @@
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/marquee.css'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './marquee.css'
 
 interface MarqueeProps {
   items: string[]

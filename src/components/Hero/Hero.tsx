@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { Terminal } from './Terminal'
 import { GlitchText } from './GlitchText'
 import { Marquee } from './Marquee'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/hero.css'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './hero.css'
 
 const techStack = [
   'React', 'TypeScript', 'Python', 'FastAPI', 'Node.js', 'Flutter',

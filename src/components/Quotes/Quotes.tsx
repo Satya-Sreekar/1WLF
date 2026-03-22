@@ -1,7 +1,7 @@
-import { SectionHeader } from './SectionHeader'
+import { SectionHeader } from '../SectionHeader'
 import { QuoteBlock } from './QuoteBlock'
-import { quotes } from '../data/content'
-import '../styles/quotes.css'
+import { quotes } from '../../data/content'
+import './quotes.css'
 
 export function Quotes() {
   return (

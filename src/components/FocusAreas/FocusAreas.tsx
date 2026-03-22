@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { SectionHeader } from './SectionHeader'
+import { SectionHeader } from '../SectionHeader'
 import { FocusCard } from './FocusCard'
-import { focusAreas } from '../data/content'
-import { useReducedMotion } from '../hooks/useReducedMotion'
-import '../styles/focus.css'
+import { focusAreas } from '../../data/content'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
+import './focus.css'
 
 const containerVariants = {
   hidden: {},

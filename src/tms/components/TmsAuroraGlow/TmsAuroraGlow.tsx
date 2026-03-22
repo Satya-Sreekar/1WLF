@@ -1,5 +1,5 @@
-import { useReducedMotion } from '../../hooks/useReducedMotion'
-import '../styles/aurora.css'
+import { useReducedMotion } from '../../../hooks/useReducedMotion'
+import './aurora.css'
 
 export function TmsAuroraGlow() {
   const skip = useReducedMotion()

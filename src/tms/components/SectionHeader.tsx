@@ -1,4 +1,4 @@
-import { ScrollReveal } from '../../components/ScrollReveal'
+import { ScrollReveal } from '../../shared'
 
 interface SectionHeaderProps {
   tag: string

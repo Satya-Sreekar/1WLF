@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { useReducedMotion } from '../hooks/useReducedMotion'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 interface GlitchTextProps {
   text: string
