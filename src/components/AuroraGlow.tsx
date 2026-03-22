@@ -1,0 +1,16 @@
+import { useReducedMotion } from '../hooks/useReducedMotion'
+import '../styles/aurora.css'
+
+export function AuroraGlow() {
+  const skip = useReducedMotion()
+
+  if (skip) return null
+
+  return (
+    <div className="aurora-container" aria-hidden="true">
+      <div className="aurora-wave aurora-wave-1" />
+      <div className="aurora-wave aurora-wave-2" />
+      <div className="aurora-wave aurora-wave-3" />
+    </div>
+  )
+}

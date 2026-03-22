@@ -1,7 +1,15 @@
 import { motion } from 'framer-motion'
 import { Terminal } from './Terminal'
+import { GlitchText } from './GlitchText'
+import { Marquee } from './Marquee'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import '../styles/hero.css'
+
+const techStack = [
+  'React', 'TypeScript', 'Python', 'FastAPI', 'Node.js', 'Flutter',
+  'Docker', 'AWS', 'LLMs', 'Computer Vision', 'CI/CD', 'Linux',
+  'MySQL', 'MongoDB', 'Nginx', 'Tailwind',
+]
 
 interface HeroProps {
   ready: boolean
@@ -16,9 +24,6 @@ export function Hero({ ready }: HeroProps) {
   return (
     <section className="hero" aria-label="Introduction">
       <div className="hero-content">
-        {/* Logo shrinks in-place via width animation.
-            z-index 10000 puts it above the loader overlay.
-            Flexbox keeps it centered at the hero's natural position. */}
         <motion.div className="hero-logo-wrapper">
           <motion.img
             src="/logo-png.png"
@@ -47,14 +52,17 @@ export function Hero({ ready }: HeroProps) {
           builder · engineer · researcher
         </motion.div>
 
-        <motion.p
+        <motion.div
           className="hero-sub"
           initial={{ opacity: 0, y: 20 }}
           animate={show ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3, ease }}
         >
-          I don't just write code — I craft systems that ship.
-        </motion.p>
+          <GlitchText
+            text="I don't just write code — I craft systems that ship."
+            delay={1.2}
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -62,6 +70,14 @@ export function Hero({ ready }: HeroProps) {
           transition={{ duration: 0.9, delay: 0.45, ease }}
         >
           <Terminal />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={show ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <Marquee items={techStack} speed={35} />
         </motion.div>
       </div>
 

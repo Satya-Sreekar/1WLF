@@ -3,6 +3,8 @@ import { SkipLink } from './components/SkipLink'
 import { ScrollProgress } from './components/ScrollProgress'
 import { BackgroundLayers } from './components/BackgroundLayers'
 import { MouseGlow } from './components/MouseGlow'
+import { AuroraGlow } from './components/AuroraGlow'
+import { Meteors } from './components/Meteors'
 import { Loader } from './components/Loader'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
@@ -21,6 +23,8 @@ export default function App() {
       <SkipLink />
       <ScrollProgress />
       <BackgroundLayers />
+      <AuroraGlow />
+      <Meteors />
       <MouseGlow />
       <main id="main-content">
         <Hero ready={loaded} />

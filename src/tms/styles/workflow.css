@@ -1,0 +1,80 @@
+/* ═══ Workflow Pipeline ═══ */
+.workflow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0.75rem;
+  flex: 1;
+  min-width: 100px;
+}
+
+.workflow-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workflow-step:hover .workflow-dot {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(79, 110, 247, 0.3);
+}
+
+.workflow-step p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  white-space: pre-line;
+}
+
+.workflow-step strong {
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.workflow-arrow {
+  color: var(--border);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.6;
+}
+
+.workflow-note {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .workflow-arrow {
+    display: none;
+  }
+  .workflow {
+    gap: 0.5rem;
+  }
+  .workflow-step {
+    min-width: 45%;
+  }
+}

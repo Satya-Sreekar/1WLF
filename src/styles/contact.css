@@ -47,6 +47,21 @@
 .contact-email a:hover {
   color: var(--cyan);
   border-bottom-color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan-glow), 0 0 40px rgba(8, 253, 216, 0.15);
+}
+
+/* Animated underline */
+.contact-email a {
+  background-image: linear-gradient(var(--cyan), var(--cyan));
+  background-size: 0% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, border-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-email a:hover {
+  background-size: 100% 2px;
+  border-bottom-color: transparent;
 }
 
 .social-links {
@@ -73,6 +88,7 @@
   border-color: var(--border-hover);
   color: var(--cyan);
   background: rgba(8, 253, 216, 0.04);
+  box-shadow: 0 0 20px rgba(8, 253, 216, 0.08), inset 0 0 20px rgba(8, 253, 216, 0.03);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,99 @@
+/* ═══ Access Control / Roles ═══ */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.role-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.role-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.role-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--radius) + 1px);
+  background: conic-gradient(
+    from var(--border-angle, 0deg),
+    var(--accent),
+    var(--accent2),
+    var(--accent),
+    transparent,
+    var(--accent)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  animation: rotateBorder 4s linear infinite;
+}
+
+.role-card:hover::before {
+  opacity: 0.4;
+}
+
+.role-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.role-badge.owner { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.role-badge.admin { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.role-badge.member { background: rgba(79, 110, 247, 0.15); color: #818cf8; }
+.role-badge.viewer { background: rgba(136, 136, 153, 0.15); color: var(--text-dim); }
+
+.role-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.role-card p {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.roles-label {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+}
+
+.roles-note {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}

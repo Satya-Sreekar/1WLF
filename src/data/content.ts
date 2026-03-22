@@ -16,7 +16,7 @@ export const terminalCommands: TerminalCommand[] = [
   { text: '  [+] Infra — Docker · Nginx · CI/CD · Linux', type: 'out' },
   { text: '', type: 'blank' },
   { text: 'user@1wlf:~$ echo $STATUS', type: 'cmd' },
-  { text: '> Building intelligent systems that ship.', type: 'out' },
+  { text: '> From paper to pipeline — every layer.', type: 'out' },
 ]
 
 export const quotes = [
@@ -62,8 +62,8 @@ export const projectInfo = {
   href: '/tms',
   tech: ['FastAPI', 'React 19', 'MySQL', 'Docker', 'Tailwind', 'TypeScript'],
   screenshots: [
-    { src: '/tms/screenshots/01-kanban.png', alt: 'TMS Kanban Board' },
-    { src: '/tms/screenshots/04-task-detail.png', alt: 'TMS Task Detail' },
+    { src: '/tms/screenshots-dark/01-kanban.png', alt: 'TMS Kanban Board' },
+    { src: '/tms/screenshots-dark/04-task-detail.png', alt: 'TMS Task Detail' },
   ],
 }
 

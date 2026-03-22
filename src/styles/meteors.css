@@ -1,0 +1,58 @@
+/* ═══ Meteors ═══ */
+.meteors-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.meteor {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow:
+    0 0 4px 1px var(--cyan-glow),
+    0 0 16px 4px rgba(8, 253, 216, 0.15);
+  opacity: 0;
+  animation: meteorShoot linear infinite;
+}
+
+.meteor::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to left, var(--cyan), transparent);
+  opacity: 0.6;
+}
+
+@keyframes meteorShoot {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+    transform: translate(-300px, 300px) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-300px, 300px) rotate(-45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meteors-container {
+    display: none;
+  }
+}

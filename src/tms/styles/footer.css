@@ -1,0 +1,17 @@
+/* ═══ Footer ═══ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.site-footer strong {
+  color: var(--text);
+}
+
+.footer-tech {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}

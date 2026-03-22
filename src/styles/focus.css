@@ -19,20 +19,39 @@
   cursor: default;
 }
 
-/* Gradient border glow on hover */
+/* Animated rotating gradient border on hover */
 .focus-card::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: 17px;
-  background: linear-gradient(135deg, var(--cyan), transparent 60%, var(--purple));
+  background: conic-gradient(
+    from var(--border-angle, 0deg),
+    var(--cyan),
+    var(--purple),
+    var(--cyan),
+    transparent,
+    var(--cyan)
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 0;
+  animation: rotateBorder 4s linear infinite;
 }
 
 .focus-card:hover::before {
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+@keyframes rotateBorder {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 /* Mouse-tracking glow */
